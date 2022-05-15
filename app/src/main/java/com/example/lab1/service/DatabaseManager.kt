@@ -20,7 +20,7 @@ class DatabaseManager(var context: Context) {
             put(COL_SATIETY, log.satiety)
         }
         var result = db?.insert(TABLE_NAME, null, cv)
-        if (result == -1.toLong())
+        if (result == (-1).toLong())
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
         else
             Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
